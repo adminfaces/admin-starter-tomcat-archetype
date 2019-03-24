@@ -7,28 +7,27 @@
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:adm="http://github.com/adminfaces"
                 template="${symbol_pound}{layoutMB.template}">
-    
+
     <ui:define name="metadata">
         <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. --> 
-        <style type="text/css">
+         <style type="text/css">
             .ui-datatable .ui-datatable-header {
                 text-align: right !important;
             }
 
         </style>
     </ui:define>
-    
     <ui:define name="description">
         Find cars by name, price and model
     </ui:define>
 
     <ui:define name="body">
         <h:form>
-			<p:focus context="@form"/>
+            <p:focus context="@form"/>
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <div id="main-buttons" class="hidden-sm hidden-xs">
-                        <p:commandButton action="/car-form?faces-redirect=true" icon="fa fa-plus"
+                        <p:commandButton action="car-form?faces-redirect=true" icon="fa fa-plus"
                                          value="New" styleClass="btn-primary"/>
                         <p:spacer width="5"/>
                         <p:commandButton value="Delete Selected" icon="fa fa-trash" styleClass="btn-danger"
@@ -44,7 +43,7 @@
                                          oncomplete="PF('selectedCars').show()" icon="fa fa-search"/>
                     </div>
 
-                    <p:splitButton value="New" action="/car-form?faces-redirect=true"
+                    <p:splitButton value="New" action="car-form?faces-redirect=true"
                                    icon="fa fa-plus"
                                    styleClass="hidden-md hidden-lg btn-primary">
                         <p:menuitem value="Delete Selected" action="${symbol_pound}{carListMB.delete}"
@@ -99,7 +98,7 @@
                                             oncomplete="PF('carsTable').filter()"/>
                                 </p:autoComplete>
                             </f:facet>
-                            <p:link value="${symbol_pound}{c.model}" outcome="/car-form.xhtml" >
+                            <p:link value="${symbol_pound}{c.model}" outcome="car-form.xhtml" >
                                 <f:param name="id" value="${symbol_pound}{c.id}"/>
                             </p:link>
 

@@ -33,6 +33,12 @@
         <include>**/*.MF</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.adoc</include>
+      </includes>
+    </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
@@ -42,7 +48,6 @@
         <include>admin-starter.iml</include>
         <include>starter3.png</include>
         <include>starter1.png</include>
-        <include>README.adoc</include>
       </includes>
     </fileSet>
   </fileSets>

@@ -42,25 +42,16 @@
         <ui:include src="/includes/controlsidebar-tabs-content.xhtml"/>
     </ui:define>
 
-
-    <ui:define name="footer">
+   <ui:define name="footer">
           <a target="_blank"
-           href="https://github.com/adminfaces/">
-            Copyright (C) 2017 - AdminFaces
+           href="https://adminfaces.github.io/site/">
+            AdminFaces - © 2017-2019
         </a>
 
         <div class="pull-right hidden-xs" style="color: gray">
             <i>${symbol_pound}{msg['starter.version']}</i>
         </div>
 
-        <script type="text/javascript">
-            if(isMobile()) {
-                ${symbol_dollar}('a.ui-link').click(function() {
-                    ${symbol_dollar}(this).prop('disabled', true);
-                    showBar();
-                });
-            }
-        </script>
     </ui:define>
 
 
